@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Http\Request;
-use App\Functions\GroupFlights;
 use Illuminate\Support\Facades\Route;
-use App\Providers\FlightServiceProvider;
+use App\Http\Controllers\FlightsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,17 +15,20 @@ use App\Providers\FlightServiceProvider;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group([
+
+    'middleware' => 'api',
+
+], function ($router) {
+
+    // Get Docs
+    Route::get('/docs', function(){ return view('scribe.index'); })->name('documentation');
+
+    // Get flights
+    Route::get("/flightsapi", [FlightsController::class, 'index']);
+
 });
 
-Route::get("/flightsapi", function(){
 
-    $flights = FlightServiceProvider::boot();
-
-    $splitedByInAndOutbound = GroupFlights::group($flights);
-
-    return $splitedByInAndOutbound;
-});
 
 
