@@ -12,7 +12,7 @@ class GroupFlights {
    *
    * @return array $flights
   */
-  public function group($arrayOfFlights){
+  public static function group($arrayOfFlights){
     // Count flights
     $totalFlights = count($arrayOfFlights);
 
