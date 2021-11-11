@@ -20,10 +20,7 @@ Route::group([
     'middleware' => 'api',
 
 ], function ($router) {
-
-    // Get Docs
-    Route::get('/docs', function(){ return view('scribe.index'); })->name('documentation');
-
+    
     // Get flights
     Route::get("/flightsapi", [FlightsController::class, 'index']);
 
