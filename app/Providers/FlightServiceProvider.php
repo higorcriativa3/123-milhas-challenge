@@ -12,7 +12,7 @@ class FlightServiceProvider extends ServiceProvider
      *
      * @return array $response
      */
-    public function boot()
+    public static function boot()
     {
         try {
             $response = Http::get("http://prova.123milhas.net/api/flights");
