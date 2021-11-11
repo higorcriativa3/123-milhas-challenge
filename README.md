@@ -4,7 +4,7 @@
 
 > ### This app is part of a job interview with 123 Milhas.
 
-This repo is functionality complete!
+## This repo is functionality complete. Access live demo by [click HERE!](https://challenge123milhas.herokuapp.com/api/flightsapi)
 
 ----------
 
@@ -44,10 +44,10 @@ You can now access the server at http://localhost:8000
 
 ### Access `/api/flightsapi` to get the group of flights.
 
+----------
 ## Get Documentation
 
-### Access `/api/docs` to get documentation.
-  Make sure your server is running
+###  [Click here](https://challenge123milhas.herokuapp.com/docs) to get documentation.
 
 ## Important Folders
 
@@ -61,7 +61,7 @@ You can now access the server at http://localhost:8000
 
 - `.env` - Environment variables can be set in this file
 
-***Note*** : You can get the POSTMAN collection at `http://127.0.0.1:8000/docs.postman`.
+### ***Note*** : You can get the POSTMAN collection [here](https://challenge123milhas.herokuapp.com/docs/collection.json).
 
 ----------
 
